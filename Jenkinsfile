@@ -18,9 +18,9 @@ pipeline {
 			}
 		}
 
-		stage('Test') {
+		stage('Deploy') {
 			steps {
-				echo "Test my final webapp"
+				sh 'java -jar target/*.jar'
 			}
 		}
 		stage('Deploy to PROD') {
